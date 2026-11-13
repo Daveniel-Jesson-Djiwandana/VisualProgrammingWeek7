@@ -6,10 +6,7 @@ plugins {
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.kotlin.serialization)
 }
-//val localProps = Properties().apply{
-//    val f = rootProject.file("local.properties")
-//    if (f.exists()) f.inputStream().use{load(it)}
-//}
+
 android {
     namespace = "com.davenieljessondjiwandana.assignmentweek7"
     compileSdk {
@@ -22,7 +19,6 @@ android {
         targetSdk = 37
         versionCode = 1
         versionName = "1.0"
-//      buildConfigField("String", "TMDB_API_KEY", "\"${localProps.getProperty("TMDB_API_KEY", "")}\"")
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 

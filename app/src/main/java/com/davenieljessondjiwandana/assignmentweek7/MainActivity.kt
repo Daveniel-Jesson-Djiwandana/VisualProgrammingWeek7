@@ -11,6 +11,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.davenieljessondjiwandana.assignmentweek7.soal1.navigation.Soal1AppNavHost
+import com.davenieljessondjiwandana.assignmentweek7.soal2.navigation.Soal2AppNavHost
 import com.davenieljessondjiwandana.assignmentweek7.ui.theme.AssignmentWeek7Theme
 
 class MainActivity : ComponentActivity() {
@@ -19,29 +21,9 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             AssignmentWeek7Theme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
+                Soal1AppNavHost()
+                //Soal2AppNavHost()
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    AssignmentWeek7Theme {
-        Greeting("Android")
     }
 }
